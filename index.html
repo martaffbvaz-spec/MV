@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html lang="pt-pt"> 
+<head> 
+    <title>portfolio test</title>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="estilos.css"> 
+
+    <style>
+        .container {
+            position: relative;
+            width: 1000px;
+            margin: auto;
+            z-index: 10;
+        }
+
+        .imagem-fundo {
+            width: 1000px;
+            height: 700px;
+            display: block;
+        }
+/* --- ESTILO DO H1 COM HOVER PARA PRETO --- */
+        h1 {
+            font-family: barbra, sans-serif;
+            font-size: 100px;
+            color: #060202; /* Cor inicial (podes mudar para a que quiseres) */
+            transition: color 0.3s ease; /* Faz a mudança ser suave */
+            cursor: default;
+        }
+
+        h1:hover {
+            color: #ffffff !important; /* Muda para preto ao passar o rato */
+        }
+        .pasta {
+            position: absolute;
+            top: 120px;
+            width: 200px;
+            height: 200px;
+        }
+       .pasta:hover {
+            transform: scale(1.05); /* Pequeno aumento no hover */
+        }
+        .pasta1 {
+            left: 20px;
+        }
+
+        .pasta2 {
+            left: 250px; /* ao lado da primeira */
+        }
+        .pasta3 {
+            left: 490px; /* ao lado da segunda */
+          
+        }
+        .pasta4 {
+            left: 740px; /* ao lado da segunda */
+          
+        }
+        
+        /* --- ANIMAÇÃO PARA A FRUTA RODAR --- */
+        @keyframes rodar {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .fruit {
+            position: absolute;
+            left: 1010px;
+            top: -100px;
+            width: 200px;
+            height: auto;
+            z-index: 10;
+            pointer-events: none;
+            /* Aplica a animação: 4 segundos por volta, infinita e linear */
+            animation: rodar 4s linear infinite;
+        }
+      
+        .cursor-loading {
+            position: absolute;
+            left: 420px;       /* Posicionado logo após o fim da pasta2 */
+            top: 310px;        /* Ajustado para parecer que está a clicar no canto */
+            width: 60px;       /* Tamanho do cursor */
+            height: auto;
+            z-index: 10;       /* Garante que fica por cima de tudo */
+            pointer-events: none; /* O clique "atravessa" o gif para a pasta */
+        }
+        .barra-ferramentas {
+            position: absolute;
+            /* Posicionada em relação ao container, mas "ancorada" à esquerda */
+            left: -200px;       /* Move a imagem para fora do container para a esquerda */
+            top: 150px;         /* Alinha verticalmente com as pastas */
+            
+            /* Define um tamanho equilibrado */
+            width: 300px;        /* Reduz o tamanho original para não sobrecarregar */
+            height: auto;       /* Mantém a proporção */
+            
+            z-index: 5;         /* Por cima do fundo, mas pode ficar atrás do cursor */
+            opacity: 0.9;       /* Ligeiramente transparente para se integrar melhor */
+            image-rendering: pixelated; /* Mantém a imagem nítida (essencial para pixel art) */
+        }
+        @keyframes mudaCor {
+            0% { background-color: #ffadad; }
+            50% { background-color: #9bf6ff; }
+            100% { background-color: #ffd6a5; }
+        } 
+    </style>
+</head>
+
+<body style="background-color:rgb(239, 161, 161);">
+
+
+    <h1 style="font-family:tanamera; font-size:100px;">
+        Portofolio Marta vaz
+    </h1> 
+
+    <div class="container">
+        <img src="imagens/imagemfundo.jpg" class="imagem-fundo">
+        
+        <!-- Pasta trabalho-->
+        <a href="Trabalho.html">
+            <img src="imagens/pasta.png" class="pasta pasta4">
+        </a>
+
+        <!-- Pasta Fotografia -->
+        <a href="fotografia.html">
+            <img src="imagens/pasta.png" class="pasta pasta1">
+        </a>
+
+        <!-- Pasta Multimedia -->
+        <a href="Multimedia.html">
+            <img src="imagens/pasta.png" class="pasta pasta2">
+        </a>
+         <!-- Pasta contact -->
+        <a href="contact.html">
+            <img src="imagens/pasta.png" class="pasta pasta3">
+            </a>
+            
+            <img src="imagens/p1.png" class="pasta de barra-ferramentas">
+        </a>
+        </a>
+            <img src="imagens/Untitled-2.png" class="fruit">
+              </a>
+              <img src="imagens/cursorhand.gif" class="cursor-loading">
+              </a>
+    </div>
+
+</body>
+</html>
